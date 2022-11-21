@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script>
+    function clickCounter() {
+    if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("resultLike").innerHTML = localStorage.clickcount;
+  } 
+  }
+  function clickCounter2() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("resultUnlike").innerHTML = localStorage.clickcount;
+    } 
+  }
+    </script>
+  </head>
+  <body>
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <td colspan="2"></td>
+          <td><a href="About.html">About</a></td>
+          <td><a href="Skill.html">Skill</a></td>
+          <td><a href="Experience.html">Experience</a></td>
+          <td><a href="Education.html">Education</a></td>
+          <td><a href="Portofolio.html">Portofolio</a></td>
+          <td><a href="Contact.html">Contact</a></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <div class="sticker" id="stiker"></div>
+            <script type="text/javascript" src="animasigambar.js"></script>
+          </td>
+          <td colspan="6" rowspan="3">
+            <h2 align="left">Web Developer</h2>
+            <h1 align="left">Muhammad Faidhu Tamam Syamsuzzuhri</h1>
+            <h3 align="left">Description</h3>
+            <p align="left">Seorang anak laki-laki yang lahir di Tangerang pada tanggal 23 Juni 2002, memulai pendidikan pada tahun 2007 di Raudhatul Athfal Al-layyinah</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="MyClockDisplay" id="MyClockDisplay" onload="showTime()"></div>
+            <script type="text/javascript" src="jamdigital.js"></script>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="clickCounter()" type="button">Like</button>
+            <div id="resultLike"></div>
+          </td>
+          <td>
+            <button onclick="clickCounter2()" type="button">Dislike</button>
+            <div id="resultUnlike"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
